@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Blogsite Webpage</h1>
+    <h3>Browse blogs in following category:</h3>
+    {%for category in categories%}
+    <p>{{category.id}}      {{category.name}}</p>
+    {%endfor%}
 </body>
 </html>

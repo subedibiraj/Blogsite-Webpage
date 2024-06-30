@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,5 +11,13 @@
     {%for category in categories%}
     <p>{{category.id}}      {{category.name}}</p>
     {%endfor%}
+
+
+    <h3>Latest Blog</h3>
+    {%for article in articles %}
+    <h2>{{article.title}}</h2>
+    <img src="{{article.cover_image.url}}" alt="">
+    <p>{{article.content}}</p>
+    {% endfor %}
 </body>
 </html>
